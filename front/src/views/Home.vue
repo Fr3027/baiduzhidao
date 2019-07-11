@@ -34,7 +34,7 @@
       <div class="text-xs-center pt-2">
         <v-pagination
           v-model="pagination.page"
-          :length="totalDesserts"
+          :length="Math.ceil(totalDesserts/5)"
           circle
           dark
           total-visible="7"
@@ -113,11 +113,11 @@ export default {
                 .includes(search);
             });
           }
-          var total = Math.ceil(items.length / 5);
-          console.log(total);
+          const total = items.length;
           if (rowsPerPage > 0) {
             items = items.slice((page - 1) * rowsPerPage, page * rowsPerPage);
           }
+
           resolve({
             items,
             total
