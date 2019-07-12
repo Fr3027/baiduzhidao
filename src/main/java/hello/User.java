@@ -1,4 +1,4 @@
-package hello;
+package entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +14,42 @@ public class User {
     private String name;
 
     private String email;
+    private Integer qq;
+    private String wechatid;
+    private String sex;
+    private String nickname;
+
+	public Integer getQq() {
+		return qq;
+	}
+
+	public void setQq(Integer qq) {
+		this.qq = qq;
+	}
+
+	public String getWechatid() {
+		return wechatid;
+	}
+
+	public void setWechatid(String wechatid) {
+		this.wechatid = wechatid;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public String getNickname() {
+		return nickname;
+	}
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
 
 	public Integer getId() {
 		return id;
