@@ -1,4 +1,6 @@
 package hello;
 
-public interface ShareCarRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface ShareCarRepository extends CrudRepository<ShareCar,Integer> {
 }

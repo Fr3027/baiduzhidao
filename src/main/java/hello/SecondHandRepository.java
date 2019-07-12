@@ -1,4 +1,6 @@
 package hello;
 
-public class SecondHandRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface SecondHandRepository extends CrudRepository<SecondHand, Integer> {
 }

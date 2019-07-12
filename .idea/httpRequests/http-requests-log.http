@@ -1,102 +1,394 @@
-GET http://localhost:8080/question/disable?problemid=8403177
+GET http://localhost:8080/sharecar/add?description=一起拼车吧！&src=青岛&des=黄岛&sdate=2019-7-12&stime=15:30:14
 Accept: */*
 Cache-Control: no-cache
 
-<> 2019-07-10T025114.200.txt
+<> 2019-07-12T035222.200.txt
 
 ###
 
-GET http://localhost:8080/question/disable?problemid=8403177
+GET http://localhost:8080/sharecar/add?description=一起拼车吧！&src=青岛&des=黄岛&sdate=2019-7-12&stime=15:30:14
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T035126.500.json
+
+###
+
+GET http://localhost:8080/sharecar/add?title=一支铅笔&description=手工制作&uid=123&date=2019-7-12&price=200&time=15:30:14
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T034832.400.json
+
+###
+
+GET http://localhost:8080/sharecar/all?title=一支铅笔&description=手工制作&uid=123&date=2019-7-12&price=200&time=15:30:14
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T034831.200.json
+
+###
+
+GET http://localhost:8080/sharecar/all?title=一支铅笔&description=手工制作&uid=123&date=2019-7-12&price=200&time=15:30:14
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T034830.200.json
+
+###
+
+GET http://localhost:8080/sharecar/all?title=一支铅笔&description=手工制作&uid=123&date=2019-7-12&price=200&time=15:30:14
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T034303.200.json
+
+###
+
+GET http://localhost:8080/second/add?title=一支铅笔&description=手工制作&uid=123&date=2019-7-12&price=200&time=15:30:14
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T114044.200.txt
+
+###
+
+GET http://localhost:8080/second/add?title=一支铅笔&description=手工制作&uid=123&date=2019-7-12&price=200&time=15:30:14.332
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T113925.400.json
+
+###
+
+GET http://localhost:8080/second/add?title=一支铅笔&description=手工制作&uid=123&time=2019-7-12 15:30:14.332&price=200
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T104756.200.txt
+
+###
+
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123&time=2019-7-12 15:30:14.332&price=100
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T103626.200.txt
+
+###
+
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=2017-11-15 15:30:14.332
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T102719.200.json
+
+###
+
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=2017-11-15 15:30:14.332
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T102658.404.json
+
+###
+
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123&time=2017-11-15 15:30:14.332
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T101218.200.txt
+
+###
+
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=2017-11-15 15:30:14.332
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T101210.200.json
+
+###
+
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=2017-11-15 15:30:14.332
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T100627.200.json
+
+###
+
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123&time=2017-11-15 15:30:14.332
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T100623.200.txt
+
+###
+
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123&time=2018-12-5 12:12:12
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T100522.400.json
+
+###
+
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123&time=2018-12-5 12:12:12
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T100346.400.json
+
+###
+
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123&time=2018-12-5 12:12:12
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T095428.400.json
+
+###
+
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=2018-12-5 12:12:12
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T095421.200.json
+
+###
+
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=2018-12-5 12:12:12
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T095319.200.json
+
+###
+
+GET http://localhost:8080/second/all\?title=i am title&description=i am description&uid=123&time=2018-12-5 12:12:12
 Accept: */*
 Cache-Control: no-cache
 
 ###
 
-GET http://localhost:8080/question/disable?problemid=8403177
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=2018-12-5 12:12:12
 Accept: */*
 Cache-Control: no-cache
 
-<> 2019-07-10T024717.200.txt
+<> 2019-07-12T094822.200.json
 
 ###
 
-GET http://localhost:8080/question/disable?problemid=8403177
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123&time=2018-12-5 12:12:12
 Accept: */*
 Cache-Control: no-cache
 
-<> 2019-07-10T024609.404.json
+<> 2019-07-12T094815.200.txt
 
 ###
 
-GET http://localhost:8080/question/add?questiontitle=也许吧&questionurl=sadfasfd&questiontype=fff&username=fr1&tasktype=555&taskid=123&problemid=333
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123&time=2018-12-5
 Accept: */*
 Cache-Control: no-cache
 
-<> 2019-07-10T121417.200.txt
+<> 2019-07-12T094758.400.json
 
 ###
 
-GET http://localhost:8080/question/add?questiontitle=也许吧&questionurl=sadfasfd&questiontype=fff&username=fr1&tasktype=555&taskid=123&problemid=333
+GET http://localhost:8080/second/aldd?title=i am title&description=i am description&uid=123&time=2018-12-5
 Accept: */*
 Cache-Control: no-cache
 
-<> 2019-07-10T115911.200.txt
+<> 2019-07-12T094754.404.json
 
 ###
 
-GET http://localhost:8080/question/add?questiontitle=也许吧&questionurl=sadfasfd&questiontype=fff&username=fr1&tasktype=555&taskid=123&problemid=333
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=2018-12-31
 Accept: */*
 Cache-Control: no-cache
-
-<> 2019-07-10T113842.200.txt
 
 ###
 
-GET http://localhost:8080/question/add?questiontitle=也许吧&questionurl=sadfasfd&questiontype=fff&username=fr1&tasktype=555&taskid=123&problemid=333
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=2018-12-31
 Accept: */*
 Cache-Control: no-cache
 
-<> 2019-07-10T113242.200.txt
+<> 2019-07-12T094407.200.json
 
 ###
 
-GET http://localhost:8080/question/add?questiontitle=也许吧&questionurl=sadfasfd&questiontype=fff&username=fr1&tasktype=555&taskid=123&problemid=333
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123&time=2018-12-31
 Accept: */*
 Cache-Control: no-cache
 
-<> 2019-07-10T112906.200.txt
+<> 2019-07-12T094406.200.txt
 
 ###
 
-GET http://localhost:8080/question/add?questiontitle=也许吧&questionurl=sadfasfd&questiontype=fff&username=fr1&tasktype=555&taskid=123&problemid=333
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=2018-12-31
 Accept: */*
 Cache-Control: no-cache
 
-<> 2019-07-10T072541.200.txt
+<> 2019-07-12T094402.200.json
 
 ###
 
-GET http://localhost:8080/question/add?questiontitle=也许吧&questionurl=sadfasfd&questiontype=fff&username=fr1&tasktype=555&taskid=123&problemid=333
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=2019-1-2
 Accept: */*
 Cache-Control: no-cache
 
-<> 2019-07-10T070618.200.txt
+<> 2019-07-12T094339.200.json
 
 ###
 
-GET http://localhost:8080/question/add?questiontitle=也许吧&questionurl=sadfasfd&questiontype=fff&username=fr1&tasktype=555&taskid=123&problemid=333
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123&time=2019-1-2
 Accept: */*
 Cache-Control: no-cache
 
-<> 2019-07-09T093741.200.txt
+<> 2019-07-12T094337.200.txt
 
 ###
 
-GET http://localhost:8080/question/add?questiontitle=也许吧&questionurl=sadfasfd&questiontype=fff&username=fr1&tasktype=tyles&taskid=123&problemid=333
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=2019-1-2
 Accept: */*
 Cache-Control: no-cache
 
-<> 2019-07-09T093640.500.json
+<> 2019-07-12T094334.200.json
+
+###
+
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=2019-1-1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T094321.200.json
+
+###
+
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123&time=2019-1-1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T094319.200.txt
+
+###
+
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=01012019
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T094254.200.json
+
+###
+
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=01012019
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T094101.200.json
+
+###
+
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123&time=01012019
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T094058.200.txt
+
+###
+
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123&time=01012019
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T094053.200.json
+
+###
+
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T094029.200.json
+
+###
+
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T090215.200.json
+
+###
+
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T090211.200.txt
+
+###
+
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T090119.200.txt
+
+###
+
+GET http://localhost:8080/second/add\?title=i am title&description=i am description&uid=123
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T090108.200.json
+
+###
+
+GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T090031.200.txt
+
+###
+
+GET http://localhost:8080/second/add?title=i am title&description=i am description&time=2017-01-01&uid=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T085944.400.json
+
+###
+
+GET http://localhost:8080/second/add?title=i am title&description=i am description&time=2017-01-01&uid=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T085758.400.json
+
+###
+
+GET http://localhost:8080/second/add?title=i am title&description=i am description&time=2017-01-01&uid=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T085417.400.json
+
+###
+
+GET http://localhost:8080/second/all?title=i am title&description=i am description&time=2017-01-01&uid=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-12T085412.200.json
 
 ###
 

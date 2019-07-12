@@ -65,7 +65,7 @@
       <v-toolbar :clipped-left="$vuetify.breakpoint.lgAndUp" flat app>
         <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
           <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-          <span class="hidden-sm-and-down">答题</span>
+          <span class="hidden-sm-and-down">校萌</span>
         </v-toolbar-title>
         <v-text-field
           flat
@@ -95,7 +95,14 @@ export default {
   data: () => ({
     dialog: false,
     drawer: null,
-    items: [{ icon: "history", text: "微信问题", router: "/" }]
+    items: [
+      { icon: "history", text: "个人中心", router: "/" },
+      { icon: "history", text: "二手交易", router: "/second" },
+      { icon: "history", text: "拼车", router: "/sharecar" },
+      { icon: "history", text: "失物招领", router: "/b" },
+      { icon: "history", text: "兼职发布", router: "/c" },
+      { icon: "history", text: "常用网站", router: "/d" }
+    ]
   }),
   props: {
     source: String
