@@ -2,7 +2,7 @@
   <div class="about">
     <v-card>
       <v-card-title>
-        Nutrition
+        <v-btn fab class="skyblue" @click="changeStatus">收藏</v-btn>
         <v-spacer></v-spacer>
         <v-text-field v-model="search" append-icon="search" label="Search" single-line hide-details></v-text-field>
       </v-card-title>
@@ -16,11 +16,25 @@
       >
         <template v-slot:items="props">
           <td class="text-xs-left title">
-            <a :href="props.item.url">{{ props.item.title }}</a>
+            <v-tooltip bottom>
+              <template v-slot:activator="{ on }">
+                <span v-on="on">{{goodtitle(props.item.title)}}</span>
+              </template>
+              <span>{{props.item.title}}</span>
+            </v-tooltip>
           </td>
-          <td class="text-xs-left">
-            <v-btn style="backgroundColor:red" @click="disable(props.item.problemId)">删除</v-btn>
+          <td class="text-xs-right">
+            <v-btn
+              small
+              style="backgroundColor:green"
+              @click="baidu(props.item.title,props.item.url)"
+            >GO</v-btn>
+            <v-btn small style="backgroundColor:red" @click="disable(props.item.problemId)">删除</v-btn>
+            <v-btn small style="backgroundColor:blue" @click="addHeart(props.item.problemId)">收藏</v-btn>
           </td>
+          <!-- <td class="text-xs-left">
+            
+          </td>-->
         </template>
         <template v-slot:no-results>
           <v-alert
@@ -45,6 +59,7 @@
 </template>
 <script>
 import axios from "axios";
+import common from "../components/utils/Common.vue";
 export default {
   data() {
     return {
@@ -67,7 +82,9 @@ export default {
           sortable: false,
           value: "operation"
         }
-      ]
+      ],
+      ur: common.httpUrl,
+      status: 0
     };
   },
   watch: {
@@ -87,6 +104,14 @@ export default {
           this.totalDesserts = data.total;
         });
       }
+    },
+    status: {
+      handler() {
+        this.getDataFromApi().then(data => {
+          this.desserts = data.items;
+          this.totalDesserts = data.total;
+        });
+      }
     }
   },
   mounted() {
@@ -95,13 +120,19 @@ export default {
       this.totalDesserts = data.total;
     });
   },
+
   methods: {
+    goodtitle(title) {
+      // console.log(title.length);
+      if (title.length > 25) title = title.substr(0, 25) + "...";
+      return title;
+    },
     getDataFromApi() {
       this.loading = true;
       return new Promise((resolve, reject) => {
         const { sortBy, descending, page, rowsPerPage } = this.pagination;
-
-        axios.get("http://localhost:8080/question/all").then(response => {
+        let url = this.ur + "question/all?status=" + this.status;
+        axios.get(url).then(response => {
           this.loading = false;
           let search = this.search.trim().toLowerCase();
           var items = response.data;
@@ -127,15 +158,47 @@ export default {
     },
 
     disable(problemId) {
-      var url = "http://localhost:8080/question/disable?problemId=" + problemId;
+      var url = this.ur + "question/disable?problemId=" + problemId;
+      // "http://202.182.112.95:9090/question/disable?problemId=" + problemId;
       axios.get(url).then(response => {
         this.getDataFromApi().then(data => {
           this.desserts = data.items;
           this.totalDesserts = data.total;
         });
       });
+    },
+    addHeart(problemId) {
+      var url = this.ur + "question/heart?problemId=" + problemId;
+      axios.get(url).then(response => {
+        this.getDataFromApi().then(data => {
+          this.desserts = data.items;
+          this.totalDesserts = data.total;
+        });
+      });
+    },
+    baidusearch(title) {
+      var url =
+        "https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=2&ch=&tn=baiduhome_pg&bar=&wd=" +
+        title +
+        "&rsv_spt=1&oq=sdf&rsv_pq=c518c4120009815f&rsv_t=4ca763qsOQbrGNb4DDEri4ajwfN0DJ0nwBSum8RlNPW5wPga9Wo3BMQLeahaYQlCqIy3&rqlang=cn&rsv_enter=1&rsv_dl=tb&inputT=7627";
+      window.open(url);
+    },
+    baidu(title, url) {
+      var url1 =
+        "https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=2&ch=&tn=baiduhome_pg&bar=&wd=" +
+        title +
+        "&rsv_spt=1&oq=sdf&rsv_pq=c518c4120009815f&rsv_t=4ca763qsOQbrGNb4DDEri4ajwfN0DJ0nwBSum8RlNPW5wPga9Wo3BMQLeahaYQlCqIy3&rqlang=cn&rsv_enter=1&rsv_dl=tb&inputT=7627";
+      window.open(url);
+      window.open(url1);
+    },
+    changeStatus() {
+      if (this.status == 0) this.status = 1;
+      else this.status = 0;
     }
   }
 };
 </script>
+<style scoped>
+</style>
+
 

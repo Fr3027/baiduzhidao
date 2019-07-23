@@ -7,4 +7,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface QuestionRepository extends CrudRepository<Question, Integer> {
     public Iterable<Question> findAllByStatusEquals(int status);
+    public Iterable<Question> findQuestionByProblemId(int problemid);
 }

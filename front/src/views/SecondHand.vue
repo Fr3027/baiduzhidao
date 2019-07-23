@@ -3,7 +3,6 @@
     <v-card>
       <v-toolbar flat color="white">
         <v-spacer></v-spacer>
-
         <v-toolbar-title>
           <v-text-field
             v-model="search"
@@ -24,6 +23,7 @@
               <span class="headline">come on !</span>
             </v-card-title>
             <v-card-text>
+              <!-- 发布二手商品的对话框 -->
               <v-form v-model="valid">
                 <v-container grid-list-md>
                   <v-layout wrap>
@@ -119,7 +119,7 @@
                 </v-container>
               </v-form>
             </v-card-text>
-
+            <!-- 底部按钮 -->
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn color="blue darken-1" flat @click="cancel">Cancel</v-btn>
@@ -130,6 +130,7 @@
         <v-divider class="mx-2" inset vertical></v-divider>
         <v-spacer></v-spacer>
       </v-toolbar>
+      <!-- 展示数据 -->
       <v-data-table
         :items="desserts"
         :pagination.sync="pagination"
@@ -143,7 +144,6 @@
           <td class="text-xs-left">{{ props.item.description }}</td>
           <td class="text-xs-left">{{ props.item.sdate }}</td>
           <td class="text-xs-left">{{ props.item.stime }}</td>
-          <!-- <td class="text-xs-left">{{ goodtime(props.item.time) }}</td> -->
           <td class="text-xs-left">{{ props.item.price }}元</td>
         </template>
         <template v-slot:no-results>
@@ -154,7 +154,7 @@
           >Your search for "{{ search }}" found no results.</v-alert>
         </template>
       </v-data-table>
-
+      <!-- 底部分页条 -->
       <div class="text-xs-center pt-2">
         <v-pagination
           v-model="pagination.page"
@@ -180,7 +180,6 @@ export default {
       desserts: [],
       loading: true,
       pagination: {},
-      selected: [],
       headers: [
         {
           text: "物品",
@@ -266,7 +265,7 @@ export default {
       };
 
       var url =
-        "http://localhost:8080/second/add?title=" +
+        "http://49.234.177.63:9090/second/add?title=" +
         item.title +
         "&description=" +
         item.description +
@@ -290,7 +289,7 @@ export default {
       return new Promise((resolve, reject) => {
         const { sortBy, descending, page, rowsPerPage } = this.pagination;
 
-        axios.get("http://localhost:8080/second/all").then(response => {
+        axios.get("http://49.234.177.63:9090/second/all").then(response => {
           this.loading = false;
           let search = this.search.trim().toLowerCase();
           var items = response.data;

@@ -1,3 +1,63 @@
+GET http://localhost:9090/question/add?problemid=8401011&questiontitle=aaa&questionurl=asdf&questiontype=fff&username=asdf&tasktype=12&taskid=45
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:9090/question/add?problemid=8401011&questiontitle=aaa&questionurl=asdf&questiontype=fff&username=asdf&tasktype=12&taskid=45
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/question/add?problemid=8401011&questiontitle=aaa&questionurl=asdf&questiontype=fff&username=asdf&tasktype=12&taskid=45
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:9090/question/add?problemid=8401011&questiontitle=aaa&questionurl=asdf&questiontype=fff&username=asdf&tasktype=12&taskid=45
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:9090/question/add?problemid=8401011&questiontitle=aaa&questionurl=asdf&questiontype=fff&username=asdf&tasktype=12&taskid=45
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:9090/question/add?problemid=8401011&questiontitle=aaa&questionurl=asdf&questiontype=fff&username=asdf&tasktype=12&taskid=45
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:9090/question/add?problemid=8401011&questiontitle=aaa&questionurl=asdf&questiontype=fff&username=asdf&tasktype=12&taskid=45
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:9090/question/add?problemid=8401011&questiontitle=aaa&questionurl=asdf&questiontype=fff&username=asdf&tasktype=12&taskid=45
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:9090/question/add?problemid=8401011&questiontitle=aaa&questionurl=asdf&questiontype=fff&username=asdf&tasktype=12&taskid=45
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:9090/question/add?problemid=8401011&questiontitle=aaa&questionurl=asdf&questiontype=fff&username=asdf&tasktype=12&taskid=45
+Accept: */*
+Cache-Control: no-cache
+
+###
+
 GET http://localhost:8080/sharecar/add?description=一起拼车吧！&src=青岛&des=黄岛&sdate=2019-7-12&stime=15:30:14
 Accept: */*
 Cache-Control: no-cache
@@ -311,84 +371,6 @@ Accept: */*
 Cache-Control: no-cache
 
 <> 2019-07-12T094029.200.json
-
-###
-
-GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-07-12T090215.200.json
-
-###
-
-GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-07-12T090211.200.txt
-
-###
-
-GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-07-12T090119.200.txt
-
-###
-
-GET http://localhost:8080/second/add\?title=i am title&description=i am description&uid=123
-Accept: */*
-Cache-Control: no-cache
-
-###
-
-GET http://localhost:8080/second/all?title=i am title&description=i am description&uid=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-07-12T090108.200.json
-
-###
-
-GET http://localhost:8080/second/add?title=i am title&description=i am description&uid=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-07-12T090031.200.txt
-
-###
-
-GET http://localhost:8080/second/add?title=i am title&description=i am description&time=2017-01-01&uid=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-07-12T085944.400.json
-
-###
-
-GET http://localhost:8080/second/add?title=i am title&description=i am description&time=2017-01-01&uid=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-07-12T085758.400.json
-
-###
-
-GET http://localhost:8080/second/add?title=i am title&description=i am description&time=2017-01-01&uid=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-07-12T085417.400.json
-
-###
-
-GET http://localhost:8080/second/all?title=i am title&description=i am description&time=2017-01-01&uid=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-07-12T085412.200.json
 
 ###
 

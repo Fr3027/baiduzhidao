@@ -268,7 +268,7 @@ export default {
       };
 
       var url =
-        "http://localhost:8080/sharecar/add?src=" +
+        "http://49.234.177.63:9090/sharecar/add?src=" +
         item.src +
         "&description=" +
         item.description +
@@ -291,7 +291,7 @@ export default {
       return new Promise((resolve, reject) => {
         const { sortBy, descending, page, rowsPerPage } = this.pagination;
 
-        axios.get("http://localhost:8080/sharecar/all").then(response => {
+        axios.get("http://49.234.177.63:9090/sharecar/all").then(response => {
           this.loading = false;
           let search = this.search.trim().toLowerCase();
           var items = response.data;

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,9 +20,10 @@ public class QuestionController {
 
     @GetMapping("/all")
     @ResponseBody
-    public List<Question> getAll() {
-        Iterable<Question> questions = questionRepository.findAllByStatusEquals(1);
+    public List<Question> getAll(@RequestParam(name="status") int status) {
+        Iterable<Question> questions = questionRepository.findAllByStatusEquals(status);
         List<Question> questionList = (List<Question>) questions;
+        Collections.reverse(questionList);
 
         return questionList;
     }
@@ -34,19 +36,16 @@ public class QuestionController {
                               @RequestParam(name = "username") String username,
                               @RequestParam(name = "tasktype") String tasktype,
                               @RequestParam(name = "taskid") String taskid,
-                              @RequestParam(name = "problemid") String problemid) {
+                              @RequestParam(name = "problemid") int problemid) {
         String anotheruser;
+        List<Question> questionByProblemId = (List<Question>) questionRepository.findQuestionByProblemId(problemid);
+        if(!questionByProblemId.isEmpty())
+            return "already exist";
         if (username == "fr1")
             anotheruser = "fr2";
         else
             anotheruser = "fr1";
 
-
-        if (false)
-            return "already exist";
-
-        if (false)
-            return "already disabled";
 
         Question q = new Question();
         q.setTitle(questiontitle);
@@ -54,10 +53,10 @@ public class QuestionController {
         q.setUsername(username);
         q.setTaskType(Integer.parseInt(tasktype));
         q.setTaskId(Integer.parseInt(taskid));
-        q.setProblemId(Integer.parseInt(problemid));
+        q.setProblemId(problemid);
 
-        //将Question的状态设为1，表示可以做的题。
-        q.setStatus(1);
+        //将Question的状态设为0，表示正常状态的题。
+        q.setStatus(0);
         questionRepository.save(q);
         return "ok";
     }
@@ -67,7 +66,19 @@ public class QuestionController {
         Optional<Question> byId = questionRepository.findById(prolblemId);
         if(byId.isPresent()){
             Question question = byId.get();
-            question.setStatus(0);
+            question.setStatus(2);
+            questionRepository.save(question);
+
+        }
+
+        return "end";
+    }@ResponseBody
+    @GetMapping("/heart")
+    public String addHeart(@RequestParam(name="problemId") int prolblemId){
+        Optional<Question> byId = questionRepository.findById(prolblemId);
+        if(byId.isPresent()){
+            Question question = byId.get();
+            question.setStatus(1);
             questionRepository.save(question);
 
         }
